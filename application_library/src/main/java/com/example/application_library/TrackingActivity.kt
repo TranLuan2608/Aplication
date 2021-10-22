@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -16,10 +17,11 @@ class TrackingActivity : AppCompatActivity() {
         val btnUsername = findViewById<Button>(R.id.btnAddUserName)
 
         btnUsername.setOnClickListener{
+            val name = userName.text.toString()
             val database = Firebase.database
-            val myRef = database.getReference("message")
-
-            myRef.setValue("Hello, World!")
+            val myRef = database.getReference("Name")
+            myRef.setValue(name)
+            Toast.makeText(this, "Add Successful", Toast.LENGTH_LONG).show()
         }
     }
 }
