@@ -3,9 +3,7 @@
     package="com.example.application_library">
 
     <application>
-        <activity
-            android:name=".MainActivity_Library"
-            android:exported="false" />
+        <activity android:name=".TrackingActivity"/>
     </application>
 
 </manifest>
