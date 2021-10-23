@@ -6,7 +6,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -26,9 +25,9 @@ class TrackingActivity : AppCompatActivity() {
             Toast.makeText(this, "Add Successful", Toast.LENGTH_LONG).show()
         }
 
-        val analytics = FirebaseAnalytics.getInstance(this)
-        val bundle = Bundle()
-        bundle.putString("message", "View Library")
-        analytics.logEvent("TrackingViewActivity", bundle)
+//        val analytics = FirebaseAnalytics.getInstance(this)
+//        val bundle = Bundle()
+//        bundle.putString("message", "View Library")
+//        analytics.logEvent("TrackingViewActivity", bundle)
     }
 }
