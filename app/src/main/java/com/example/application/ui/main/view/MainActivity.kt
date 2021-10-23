@@ -1,6 +1,5 @@
 package com.example.application.ui.main.view
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
