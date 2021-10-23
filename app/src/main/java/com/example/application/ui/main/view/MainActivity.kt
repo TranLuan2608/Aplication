@@ -17,12 +17,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        findViewById<Button>(R.id.btnTracking).setOnClickListener{
+        val track = findViewById<Button>(R.id.btnTracking)
+        track.setOnClickListener{
             startActivity(Intent(this, TrackingActivity::class.java))
             val bundle = Bundle().apply {
                 putString(FirebaseAnalytics.Param.ITEM_ID, "123")
-                putString(FirebaseAnalytics.Param.ITEM_NAME, "Test Item")
-                putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Image")
+                putString(FirebaseAnalytics.Param.ITEM_NAME, "Test View")
+                putString(FirebaseAnalytics.Param.CONTENT_TYPE, "View")
             }
             firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT,bundle)
         }
