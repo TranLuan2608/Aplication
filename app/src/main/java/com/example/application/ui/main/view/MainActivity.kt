@@ -7,6 +7,7 @@ import android.widget.Button
 import com.example.application.R
 import com.example.application_library.TrackingActivity
 import com.google.firebase.analytics.FirebaseAnalytics
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
                 putString(FirebaseAnalytics.Param.CONTENT_TYPE, "View")
             }
             firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT,bundle)
+        }
+
+        val bottomSheetFragment = BottomSheetFragment()
+        btnShowBottomSheet.setOnClickListener {
+            bottomSheetFragment.show(supportFragmentManager, "BottomSheetDialog")
         }
     }
 }
