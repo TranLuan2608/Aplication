@@ -6,34 +6,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:behavior_hideable="true"
     app:behavior_peekHeight="0dp"
-    android:background="@color/white"
+    android:background="@color/grey"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
     <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
+        android:id="@+id/tvCloseBS"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:padding="16dp"
+        android:padding="20dp"
+        android:text="x"
         android:textColor="@color/black"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="BottomSheet" />
-    <Button
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="tvCBS"/>
+    <ImageView
+        android:id="@+id/icon_like"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_thumb_up_24"
         app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/btnTest1"
+        app:layout_constraintTop_toBottomOf="@id/tvCloseBS"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/tvLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button Test 1"/>
-    <Button
-        app:layout_constraintTop_toBottomOf="@+id/btnTest1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/btnTest2"
+        android:text="Like"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvCloseBS"
+        app:layout_constraintLeft_toRightOf="@id/icon_like"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"/>
+    <ImageView
+        android:id="@+id/icon_Share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button Test 2"/>
+        android:src="@drawable/ic_baseline_share_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_like"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvLike"
+        app:layout_constraintLeft_toRightOf="@id/icon_Share"
+        android:paddingTop="40dp"
+        android:paddingLeft="30dp"/>
+    <ImageView
+        android:id="@+id/icon_Download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_Share"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/tvDowL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvShare"
+        app:layout_constraintLeft_toRightOf="@id/icon_Download"
+        android:paddingTop="50dp"
+        android:paddingLeft="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

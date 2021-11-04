@@ -1,11 +1,10 @@
 package com.example.application.ui.main.view
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.application.R
 import com.example.application_library.TrackingActivity
@@ -24,16 +23,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val track = findViewById<Button>(R.id.btnTracking)
-        track.setOnClickListener {
-            startActivity(Intent(this, TrackingActivity::class.java))
-            val bundle = Bundle().apply {
-                putString(FirebaseAnalytics.Param.ITEM_ID, "123")
-                putString(FirebaseAnalytics.Param.ITEM_NAME, "Test View")
-                putString(FirebaseAnalytics.Param.CONTENT_TYPE, "View")
-            }
-            firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
-        }
+//        val track = findViewById<Button>(R.id.btnTracking)
+//        track.setOnClickListener {
+//            startActivity(Intent(this, TrackingActivity::class.java))
+//            val bundle = Bundle().apply {
+//                putString(FirebaseAnalytics.Param.ITEM_ID, "123")
+//                putString(FirebaseAnalytics.Param.ITEM_NAME, "Test View")
+//                putString(FirebaseAnalytics.Param.CONTENT_TYPE, "View")
+//            }
+//            firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+//        }
 
 
         val bottomSheet = findViewById<ConstraintLayout>(R.id.bottomSheet)
@@ -41,16 +40,11 @@ class MainActivity : AppCompatActivity() {
 
         btnShowBottomSheet.setOnClickListener {
             bsBehavior.state = BottomSheetBehavior.STATE_HALF_EXPANDED
-            findViewById<TextView>(R.id.title).text = "Bottom Sheet"
         }
+        tvCloseBS.setOnClickListener {
+            bsBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
-        btnTest1.setOnClickListener {
-            Toast.makeText(this,"Button test 1", Toast.LENGTH_SHORT).show()
         }
-        btnTest2.setOnClickListener {
-            Toast.makeText(this,"Button test 2", Toast.LENGTH_SHORT).show()
-        }
-
 
     }
 }
