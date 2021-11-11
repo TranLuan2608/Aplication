@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_drop_down_circle_24.xml" value="0.24895833333333334" />
         <entry key="app/src/main/res/drawable/ic_baseline_screen_share_24.xml" value="0.2734375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19444444444444445" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_biometric_login.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_bottom_sheet.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23465758345300144" />
+        <entry key="app/src/main/res/layout/activity_tracking.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.1" />
         <entry key="app/src/main/res/layout/bottom_test.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/bottomsheet_fragment.xml" value="0.1" />
         <entry key="application_library/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />

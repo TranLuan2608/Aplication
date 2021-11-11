@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.application">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:name=".HiltApplication"
@@ -13,12 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Application">
         <activity
-            android:name=".ui.main.view.MainActivity">
+            android:name=".ui.main.view.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.view.BiometricLoginActivity"
+            android:exported="false" />
+        <activity android:name=".ui.main.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.main.view.BottomSheetActivity" />
     </application>
 
 </manifest>
